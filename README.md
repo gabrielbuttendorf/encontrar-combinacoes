@@ -17,10 +17,10 @@ Para utilizar, basta fazer uma cópia da planilha [deste link](https://docs.goog
 
 ### 🖼️ IMAGENS DO PROJETO
 
-- Combinação sem valores negativos
-  
-![image01](https://github.com/gabrielbuttendorf/encontrar-combinacoes/assets/125272859/98f58fd8-577c-488c-a938-f359d7c224b2)
-
 - Combinação com valores negativos
+  
+![image01](https://github.com/gabrielbuttendorf/encontrar-combinacoes/assets/125272859/18f347d7-4e19-46e2-9e6c-5953a7369ee1)
 
-![image02](https://github.com/gabrielbuttendorf/encontrar-combinacoes/assets/125272859/82c4198d-e43e-40f9-a3f8-023b195a86db)
+- Combinação sem valores negativos
+
+![image02](https://github.com/gabrielbuttendorf/encontrar-combinacoes/assets/125272859/576ce426-5f31-4006-8aab-32706e950161)
