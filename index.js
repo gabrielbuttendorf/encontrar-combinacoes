@@ -1,8 +1,8 @@
-//Dados da planilha
+//dados da planilha
 const planilha = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet()
 const ultimaLinha = planilha.getLastRow()
 
-//Pegar valores da planilha
+//pegar valores da planilha
 var valorSoma = planilha.getRange('B2').getValue()
 const colunaValores = planilha.getRange('A2:A' + ultimaLinha).getValues()
 
@@ -18,7 +18,7 @@ function encontrarCombinacoes(colunaValores, soma) {
   const negativo = planilha.getRange('G1').getValue()
 
   function backtrack(indiceInicial, somaAtual, combinacaoAtual) {
-    somaAtual = somaAtual - 0.000000001; //Evitar que não some caso ultrapasse.
+    somaAtual = somaAtual - 0.000000001; // Evitar que não some caso ultrapasse.
     if (combinacaoEncontrada) {
       return
     }
@@ -29,7 +29,7 @@ function encontrarCombinacoes(colunaValores, soma) {
       return
     }
 
-    //Negativos e positivos
+    //negativos e positivos
     if (negativo === true) {
       if (colunaValores == null) {
         return
@@ -40,7 +40,7 @@ function encontrarCombinacoes(colunaValores, soma) {
             combinacaoAtual.pop()
         }
       }
-    //Somente positivos
+    //somente positivos
     } else {
       if (colunaValores == null) {
         return
@@ -73,7 +73,7 @@ function exibir() {
 function modificacaoPlanilha() {
   const celulaFormula = planilha.getRange('D2')
   
-  //Limpar D2 para baixo
+  //limpar D2 para baixo
   const numRowsToClear = planilha.getLastRow() - 1
   planilha.getRange(celulaFormula.getRow(), celulaFormula.getColumn(), numRowsToClear, 1).clearContent()
   
@@ -90,4 +90,8 @@ function modificacaoPlanilha() {
     const celulasResultado = celulaFormula.offset(0, 0, arrayResultado.length, arrayResultado[0].length)
     celulasResultado.setValues(arrayResultado)
   }
+}
+
+function onEdit(e) {
+  modificacaoPlanilha()
 }
